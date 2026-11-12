@@ -9,7 +9,7 @@ export JAVA_HOME=/opt/homebrew/opt/openjdk
 ## 2. Build
 
 ```bash
-./build.sh fr265          # hasil: bin/*.prg
+./build.sh fr265          # hasil: bin/MinimalLines.prg
 ```
 
 Build manual tanpa script (device lain, mis. fr965):
@@ -22,13 +22,15 @@ monkeyc -f monkey.jungle -d fr965 -o bin/app.prg -y ~/.garmin/developer_key.der 
 
 ```bash
 open ~/Applications/ConnectIQ.app     # buka simulator, biarkan terbuka
-monkeydo bin/*.prg fr265              # push ke simulator (Ctrl+C untuk stop)
+monkeydo bin/MinimalLines.prg fr265   # push ke simulator (Ctrl+C untuk stop)
+# (Waveform: monkeydo bin/SimpleFace.prg fr265)
+# JANGAN pakai wildcard bin/*.prg — nama file harus persis!
 ```
 
 ## 4. Sideload ke jam asli
 
 ```bash
-cp bin/*.prg ~/Desktop/     # siapkan file untuk di-drag
+cp bin/MinimalLines.prg ~/Desktop/     # siapkan file untuk di-drag
 ```
 
 1. Jam tercolok USB, **mode data aktif** (Settings → System → USB Mode → re-select MTP)
@@ -60,7 +62,7 @@ git push
 ```bash
 export JAVA_HOME=/opt/homebrew/opt/openjdk
 ./build.sh fr265
-monkeydo bin/*.prg fr265
+monkeydo bin/MinimalLines.prg fr265   # nama file harus persis, jangan wildcard
 ```
 
 ## Catatan
