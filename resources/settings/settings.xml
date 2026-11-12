@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+    <setting propertyKey="@Properties.hoursColor" title="@Strings.HoursColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0xFF85B3">@Strings.ColorLightPink</listEntry>
+            <listEntry value="0xFF0066">@Strings.ColorHotPink</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+            <listEntry value="0x4DEEEA">@Strings.ColorCyan</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.accentColor" title="@Strings.AccentColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0xFF0066">@Strings.ColorHotPink</listEntry>
+            <listEntry value="0xFF85B3">@Strings.ColorLightPink</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+            <listEntry value="0x4DEEEA">@Strings.ColorCyan</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.topSlot" title="@Strings.TopSlotTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.SlotSteps</listEntry>
+            <listEntry value="1">@Strings.SlotHeartRate</listEntry>
+            <listEntry value="2">@Strings.SlotCalories</listEntry>
+            <listEntry value="3">@Strings.SlotBattery</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.bottomSlot" title="@Strings.BottomSlotTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.SlotHeartRate</listEntry>
+            <listEntry value="0">@Strings.SlotSteps</listEntry>
+            <listEntry value="2">@Strings.SlotCalories</listEntry>
+            <listEntry value="3">@Strings.SlotBattery</listEntry>
+        </settingConfig>
+    </setting>
+
+</settings>

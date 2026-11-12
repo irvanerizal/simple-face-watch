@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application
+        id="996ef590-9507-4bfa-97d6-376da499e27b"
+        type="watchface"
+        name="@Strings.AppName"
+        entry="MinimalLinesApp"
+        launcherIcon="@Drawables.LauncherIcon"
+        minSdkVersion="3.2.0"
+        version="0.1.0">
+
+        <!-- Font Monoton 105px di-tuning untuk layar 416x416 (FR265).
+             Device lain jalan tapi proporsinya optimal di 416px. -->
+        <iq:products>
+            <iq:product id="fr265"/>
+            <iq:product id="fr265s"/>
+            <iq:product id="fr965"/>
+            <iq:product id="fr970"/>
+        </iq:products>
+
+        <iq:permissions/>
+
+        <iq:languages/>
+
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>

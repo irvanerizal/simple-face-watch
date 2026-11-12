@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+    <!-- Monoton 148px: inline/striped display digits (0-9 + colon).
+         Glyph ±120px tall; white-on-transparent, color via Dc.setColor(). -->
+    <font id="TimeDigits" filename="Monoton148.fnt" antialias="true" filter="0123456789:" />
+</fonts>

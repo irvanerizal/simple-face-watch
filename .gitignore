@@ -1,0 +1,17 @@
+# Build output
+bin/
+*.prg
+*.iq
+*.debug.xml
+*.mir
+
+# Developer key (keep private!)
+*.pem
+*.der
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Screenshots hasil test
+result*.png
