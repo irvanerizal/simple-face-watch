@@ -10,8 +10,8 @@ tanggal berjalan vertikal di kedua sisi.
 
 - **Stacked time** — jam di atas (light pink `#FF85B3`), menit di bawah
   (hot pink `#FF0066`), font bitmap **Monoton 105px** (striped digits)
-- **Top data slot** (Y 12%) — steps format singkat (`12.3k`) + ikon jejak kaki
-- **Bottom data slot** (Y 88%) — detak jantung + ikon hati outline
+- **Top data slot** (Y 12%) — detak jantung + ikon hati outline (default)
+- **Bottom data slot** (Y 88%) — steps format singkat (`12.3k`) + ikon jejak kaki (default)
 - **Side columns** (X 12% & 88%) — bulan (O/C/T) dan tanggal (2/8) vertikal
 - **Customizable** (Connect IQ app settings):
   - Hours Color & Accent Color (Light Pink / Hot Pink / White / Cyan)

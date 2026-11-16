@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-    <property id="hoursColor" type="number">0xFF85B3</property>
-    <property id="accentColor" type="number">0xFF0066</property>
-    <property id="topSlot" type="number">0</property>
-    <property id="bottomSlot" type="number">1</property>
+    <property id="hoursColor" type="number">0xFF8FA3</property>
+    <property id="accentColor" type="number">0xFF8FA3</property>
+    <property id="topSlot" type="number">1</property>
+    <property id="bottomSlot" type="number">0</property>
 </properties>

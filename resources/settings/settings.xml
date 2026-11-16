@@ -21,8 +21,8 @@
 
     <setting propertyKey="@Properties.topSlot" title="@Strings.TopSlotTitle">
         <settingConfig type="list">
-            <listEntry value="0">@Strings.SlotSteps</listEntry>
             <listEntry value="1">@Strings.SlotHeartRate</listEntry>
+            <listEntry value="0">@Strings.SlotSteps</listEntry>
             <listEntry value="2">@Strings.SlotCalories</listEntry>
             <listEntry value="3">@Strings.SlotBattery</listEntry>
         </settingConfig>
@@ -30,8 +30,8 @@
 
     <setting propertyKey="@Properties.bottomSlot" title="@Strings.BottomSlotTitle">
         <settingConfig type="list">
-            <listEntry value="1">@Strings.SlotHeartRate</listEntry>
             <listEntry value="0">@Strings.SlotSteps</listEntry>
+            <listEntry value="1">@Strings.SlotHeartRate</listEntry>
             <listEntry value="2">@Strings.SlotCalories</listEntry>
             <listEntry value="3">@Strings.SlotBattery</listEntry>
         </settingConfig>

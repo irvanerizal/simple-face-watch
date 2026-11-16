@@ -20,9 +20,10 @@ class MinimalLinesView extends WatchUi.WatchFace {
     //! Bold sans for data slots and side columns
     private var _fData as Graphics.FontType?;
 
-    // Defaults; overridable via Connect IQ app settings
-    private const DEFAULT_HOURS = 0xFF85B3;   // light pink
-    private const DEFAULT_ACCENT = 0xFF0066;  // vibrant magenta
+    // "Rose + Burgundy" colorway
+    private const HOUR_COLOR = 0xFF8FA3;     // rose: hours + top slot
+    private const MINUTE_COLOR = 0xC2123F;   // burgundy: minutes
+    private const ACCENT_COLOR = 0xFF8FA3;   // rose: bottom slot + side columns
 
     // Data slot types (mirrors settings.xml)
     private const SLOT_STEPS = 0;
@@ -49,8 +50,9 @@ class MinimalLinesView extends WatchUi.WatchFace {
         var h = dc.getHeight();
         var cx = w / 2;
 
-        var hoursColor = propColor("hoursColor", DEFAULT_HOURS);
-        var accentColor = propColor("accentColor", DEFAULT_ACCENT);
+        var hoursColor = propColor("hoursColor", HOUR_COLOR);
+        var minuteColor = MINUTE_COLOR;
+        var accentColor = propColor("accentColor", ACCENT_COLOR);
 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
@@ -72,7 +74,7 @@ class MinimalLinesView extends WatchUi.WatchFace {
         var digitGap = (w * 0.019).toNumber();     // ~8px @ 416
         dc.setColor(hoursColor, Graphics.COLOR_TRANSPARENT);
         drawDigits(dc, cx, (h * 0.338).toNumber(), hour.format("%02d"), fTime, digitGap);
-        dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(minuteColor, Graphics.COLOR_TRANSPARENT);
         drawDigits(dc, cx, (h * 0.662).toNumber(), clock.min.format("%02d"), fTime, digitGap);
 
         // ---- Top data slot (steps by default) ----
