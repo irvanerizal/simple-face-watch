@@ -1,3 +1,4 @@
+import Toybox.Activity;
 import Toybox.ActivityMonitor;
 import Toybox.Application;
 import Toybox.Application.Properties;
@@ -30,6 +31,9 @@ class MinimalLinesView extends WatchUi.WatchFace {
     private const SLOT_HR = 1;
     private const SLOT_CALORIES = 2;
     private const SLOT_BATTERY = 3;
+
+    //! Marker used by heart rate history for "no valid sample"
+    private const INVALID_HR = 255;
 
     function initialize() {
         WatchFace.initialize();
@@ -277,10 +281,25 @@ class MinimalLinesView extends WatchUi.WatchFace {
         return steps != null ? steps : 0;
     }
 
+    //! Heart rate from the live activity engine first, then the newest
+    //! valid history sample. History samples use 255 as an "invalid"
+    //! marker between measurements - never show that.
     private function heartRate() as String {
-        var sample = ActivityMonitor.getHeartRateHistory(1, true).next();
-        if (sample != null && sample.heartRate != null) {
-            return sample.heartRate.toString();
+        var info = Activity.getActivityInfo();
+        if (info != null) {
+            var live = info.currentHeartRate;
+            if (live != null && live > 0 && live != INVALID_HR) {
+                return live.toString();
+            }
+        }
+        var iter = ActivityMonitor.getHeartRateHistory(5, true);
+        var sample = iter.next();
+        while (sample != null) {
+            var hr = sample.heartRate;
+            if (hr != null && hr > 0 && hr != INVALID_HR) {
+                return hr.toString();
+            }
+            sample = iter.next();
         }
         return "--";
     }

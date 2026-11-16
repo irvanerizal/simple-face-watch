@@ -6,7 +6,7 @@ set -euo pipefail
 
 DEVICE="${1:-fr265}"
 OUT_DIR="bin"
-PRG="$OUT_DIR/MinimalLines.prg"
+PRG="$OUT_DIR/MinimalLines-$DEVICE.prg"
 
 # 1) Cari compiler monkeyc.
 if [[ -n "${CONNECTIQ_SDK:-}" ]]; then
