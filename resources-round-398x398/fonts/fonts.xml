@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+    <!-- Monoton 142px: tuned for 398x398 (FR165) -->
+    <font id="TimeDigits" filename="Monoton142.fnt" antialias="true" filter="0123456789:" />
+</fonts>
