@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-    <property id="hoursColor" type="number">0xFF8FA3</property>
-    <property id="accentColor" type="number">0xFF8FA3</property>
-    <property id="topSlot" type="number">1</property>
-    <property id="bottomSlot" type="number">0</property>
+    <!-- IDs are versioned: Connect IQ persists property values across app
+         updates, so defaults in this file only seed a fresh install. The
+         "v2" ids orphan any stale values from earlier builds. -->
+    <property id="colorHoursV2" type="number">0xFF8FA3</property>
+    <property id="colorAccentV2" type="number">0xFF8FA3</property>
+    <property id="slotTopV2" type="number">1</property>
+    <property id="slotBottomV2" type="number">0</property>
 </properties>

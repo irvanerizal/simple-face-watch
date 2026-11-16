@@ -50,9 +50,9 @@ class MinimalLinesView extends WatchUi.WatchFace {
         var h = dc.getHeight();
         var cx = w / 2;
 
-        var hoursColor = propColor("hoursColor", HOUR_COLOR);
+        var hoursColor = propColor("colorHoursV2", HOUR_COLOR);
         var minuteColor = MINUTE_COLOR;
-        var accentColor = propColor("accentColor", ACCENT_COLOR);
+        var accentColor = propColor("colorAccentV2", ACCENT_COLOR);
 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
@@ -78,10 +78,10 @@ class MinimalLinesView extends WatchUi.WatchFace {
         drawDigits(dc, cx, (h * 0.662).toNumber(), clock.min.format("%02d"), fTime, digitGap);
 
         // ---- Top data slot (heart rate by default) ----
-        drawSlot(dc, cx, (h * 0.12).toNumber(), propInt("topSlot", SLOT_HR), hoursColor);
+        drawSlot(dc, cx, (h * 0.12).toNumber(), propInt("slotTopV2", SLOT_HR), hoursColor);
 
         // ---- Bottom data slot (steps by default) ----
-        drawSlot(dc, cx, (h * 0.88).toNumber(), propInt("bottomSlot", SLOT_STEPS), accentColor);
+        drawSlot(dc, cx, (h * 0.88).toNumber(), propInt("slotBottomV2", SLOT_STEPS), accentColor);
 
         // ---- Side vertical date columns, close to the screen edges ----
         var date = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
